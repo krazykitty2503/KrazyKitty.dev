@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  min-width: 20rem;
+  min-width: 0;
   margin: 0;
   overflow-x: clip;
   background:
@@ -600,6 +600,7 @@ code {
 
 .tier-label {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 0.75rem;
   font-family: var(--font-display);
@@ -619,6 +620,7 @@ code {
 
 .tier-items {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.48rem;
   padding: 0;
@@ -908,6 +910,14 @@ code {
   border-top: 1px solid var(--line);
 }
 
+.research-card {
+  min-height: 23rem;
+}
+
+.research-card > .btn {
+  margin-top: auto;
+}
+
 .project summary {
   display: flex;
   align-items: center;
@@ -961,6 +971,10 @@ code {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.85rem;
   margin-top: 2.4rem;
+}
+
+.engineering-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .universe-grid article {
@@ -1160,6 +1174,11 @@ code {
   max-width: 42rem;
   margin-top: 0.8rem;
   color: var(--muted);
+}
+
+.contact-actions {
+  flex: 0 1 22rem;
+  margin-top: 0;
 }
 
 .site-footer {
@@ -1438,6 +1457,16 @@ code {
   .contact-panel {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .contact-actions {
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 22rem) {
+  .hero-title {
+    font-size: clamp(1.85rem, 11.5vw, 2.5rem);
   }
 }
 

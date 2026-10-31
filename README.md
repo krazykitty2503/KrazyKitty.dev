@@ -7,7 +7,31 @@ The site is a dependency-free static build: semantic HTML, CSS and a small amoun
 vanilla JavaScript. It has no framework, build step, analytics, cookies or third-party
 runtime requests.
 
-Public content snapshot: **10 October 2026**.
+Public content review: **31 October 2026**.
+
+## Content refresh — 31 October 2026
+
+This local candidate preserves the existing design and artwork. It adds GitHub and
+Hugging Face profile links, 14 featured project cards, two supporting engineering
+repositories and canonical KRAZY//CORD and KRAZY//NEXUS display names. The research
+section links to KittyLM Research, Neural Lab, NEKO//AGENT, DATA LAB, the KTL Research
+Hub and Research Collections.
+
+DATA LAB is described as research documentation and workflow tooling, not a published
+training dataset. KittyLM remains experimental; no pretrained model release is claimed.
+
+The content uses current repository documentation, public Hugging Face metadata and
+Kitty's current decisions. Kitty authorised brief technical summaries of private
+projects, including SOUL//CORE and LOVE//TERMINAL, with no private repository links or
+personal details. Workstreams replace the old unconfirmed priority rankings.
+
+KRAZY//NEXUS remains ongoing pre-alpha control-plane development, with KERNEL//KITTY
+as its first target managed node. KERNEL//SENTINEL identifies the owner-confirmed
+Raspberry Pi 400 hardware without claiming a working monitoring deployment.
+
+Kitty authorised publication after reviewing the local candidate. Live deployment must
+be verified separately from a successful Git push. Hosting configuration and DNS are
+unchanged. The preceding Git revision remains available for a reviewed rollback.
 
 ## Public identity
 
@@ -18,7 +42,8 @@ Public content snapshot: **10 October 2026**.
 - Education wording: **Computer Science student**
 
 The previous public names for the Linux and control-plane projects are intentionally not
-used. Their public names are now **KITTY//LINUX** and **KITTY//NEXUS**.
+used. Their public names are **KITTY//LINUX** and **KRAZY//NEXUS**.
+The Equicord project is **KRAZY//CORD**; KRAZY//CORE is its historical name.
 
 ## Site structure
 
@@ -45,32 +70,34 @@ the retired hero or social card.
 ## Information architecture
 
 1. Hero and public identity
-2. Current public priority stack
+2. Current workstreams
 3. Conceptual ecosystem map
 4. Featured project registry
-5. Seven-family Development Universe
-6. Public technical roadmap
-7. About, engineering principles and contact
+5. Public research workspaces on Hugging Face
+6. Supporting design-system and governance repositories
+7. Seven-family Development Universe
+8. Public technical roadmap
+9. About, engineering principles and profile links
 
 The full Development Universe is a catalogue of named systems, modules and concepts. It is
 not a claim that every entry is a completed application.
 
 ## Status model
 
-The site deliberately separates two dimensions:
+The site separates development stage from repository visibility:
 
 | Dimension | Values | Meaning |
 |---|---|---|
 | Lifecycle | Operating, Active, Maintaining, Planned | How mature or active the project is |
-| Priority | P0, P1, P2, P3 | Where attention currently sits |
+| Source visibility | Public source, Private source | Whether a repository link can be shared |
 
-**Operating** means observed running or in use at the dated review point. It is not a
-blanket security, backup or availability claim. **Active** means current development, not
-production readiness. **Planned** content remains clearly labelled.
+**Operating** means owner-reported running or in use at the dated review point. It is not
+an independent runtime check or a blanket security, backup or availability claim.
+**Active** means development, not production readiness. **Planned** content remains labelled.
 
-The public work-in-progress rule is a maximum of three heavy coding tracks at once. The
-portfolio can contain more active projects because some work is staged, maintained or
-waiting at a gate.
+The focus section groups workstreams without assigning unconfirmed P0–P3 rankings.
+Repository documentation and owner reports are attributed in project snapshots;
+the website does not independently monitor or test the linked systems.
 
 ## Public-content boundary
 
@@ -139,7 +166,7 @@ loading and Content Security Policy behaviour more closely.
 Each featured project is an article with:
 
 - a lifecycle value in the data-status attribute;
-- a separate priority badge;
+- a separate source-visibility badge;
 - a public-safe summary;
 - technology tags;
 - a native details disclosure for current state and next gate.
@@ -147,7 +174,7 @@ Each featured project is an article with:
 When adding or changing a card:
 
 1. Confirm the public project name.
-2. Verify the lifecycle and priority independently.
+2. Verify the lifecycle and repository visibility independently.
 3. Use the dated source evidence available at the time.
 4. Avoid exposing private paths, identifiers or operational details.
 5. Add a new filter only when it represents a genuinely distinct lifecycle.
@@ -214,13 +241,21 @@ year-long caching.
 - Reduced-motion and no-JavaScript behaviour
 - Screen-reader and real-device review
 
-### Validation performed for this update
+### Validation performed for the 31 October candidate
 
-- HTML validation: passed with `html-validate`.
-- JavaScript syntax: passed with `node --check`.
-- Local asset reference audit: passed with no missing files.
-- Retired-name and private-content scan: passed with no matches.
-- Generated hero and social-card artwork: visually inspected before optimisation.
-- Live desktop/mobile browser walkthrough: not completed because the isolated app browser
-  could not reach the temporary host preview server. Treat this, keyboard-only review,
-  screen-reader review and real-device review as release checks rather than completed tests.
+- Focused HTML structure, unique IDs, fragment targets and local asset references: passed.
+  This is not a full HTML conformance certification.
+- All ten unique public profile, project and research links returned HTTP 200 anonymously.
+- JavaScript syntax and Git whitespace checks: passed.
+- Browser layout checks at 320, 390, 768, 1024 and 1280 pixels: passed after correcting
+  the narrow-screen hero minimum width. No horizontal overflow remained in the checks.
+- Project lifecycle filters, retained research cards, details disclosures, effects toggle,
+  mobile menu and Escape dismissal: exercised successfully.
+- Browser console warnings/errors: none observed during the final checks.
+- No-JavaScript browser mode, reduced-motion browser emulation, a complete keyboard-only
+  walkthrough, screen-reader review and real-device review: not run. Static fallback and
+  reduced-motion rules remain in source; their presence is not full behavioural validation.
+- Existing JavaScript, design tokens, fonts, artwork, CNAME and licences remain unchanged.
+
+The linked project runtimes were not tested. Repository descriptions are documentation
+evidence, and the owner-reported home-server state is not independent operational validation.
