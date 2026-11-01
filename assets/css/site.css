@@ -1102,11 +1102,11 @@ code {
 }
 
 .profile-panel img {
-  aspect-ratio: 1;
   width: 100%;
+  height: auto;
   border: 1px solid var(--line-strong);
   border-radius: var(--kk-radius-md);
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: var(--glow);
 }
 
